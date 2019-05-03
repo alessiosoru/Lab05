@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.anagrammi.controller.AnagrammiController"/>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.anagrammi.controller.AnagrammiController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="411.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Inserisci una parola per trovare i suoi anagrammi:" />
+            <HBox spacing="15.0">
+               <children>
+                  <TextField fx:id="parolaTxt" />
+                  <Button fx:id="calcolaAnagrammiButton" mnemonicParsing="false" onAction="#handleCalcolaAnagrammi" text="Trova Anagrammi" />
+               </children>
+            </HBox>
+            <Label text="Anagrammi corretti" />
+            <TextArea fx:id="anagrammiCorrettiTxt" editable="false" />
+            <Label text="Anagrammi errati" />
+            <TextArea fx:id="anagrammiErratiTxt" editable="false" />
+            <Button fx:id="resetButton" mnemonicParsing="false" onAction="#handleReset" text="Reset" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <top>
+      <Label text="Lab5_Anagrammi" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </top>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</BorderPane>
